@@ -13,7 +13,7 @@ $five = array(0,0,0,0,0,0);
 $six = array(0,0,0,0,0,0);
 $seven = array(0,0,0,0,0,0);
 $getid = "88630";
-if(isset($_GET['id'])) {
+if(isset($_GET['id']) && is_numeric($_GET['id'])) {
   $getid = $_GET['id'];
 }
 $url = "https://stairway.sakura.ne.jp/bms/lroverjoy/?contents=player&page=".$getid;
