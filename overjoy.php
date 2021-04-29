@@ -259,7 +259,7 @@ $a = 0;
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>おばージョイグラフ [紬ｳﾞｪﾝﾀﾞｰｽ]</title>
+  <title>Overjoy[<?php echo $getid ?>]</title>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <style>
     .level { vertical-align: top; padding-right: 10px }
