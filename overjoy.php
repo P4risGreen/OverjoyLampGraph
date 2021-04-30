@@ -496,7 +496,7 @@ $a = 0;
     if(isset($_POST['move'])){
       header( "Location: ./overjoy.php?id=".$_POST['id']);
     }
-    ?>
+    ?><br><br>
   <div class="accordion" id="accordion-4">
   <div class="card">
     <div class="card-header" id="header-4a">
