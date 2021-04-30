@@ -488,23 +488,33 @@ $a = 0;
           </td>
         </tr>
       </tbody></table><br>
-
-      <div class="accordion" id="accordion-4">
+      <form action="index.php" method="post">
+      <input type="text" class="form-control" name="id" placeholder="LR2ID">
+      <button class="btn btn-success" name="move" value="insane" onclick="location.href='#'">グラフをみる</button>
+    </form>
+    <?php
+    if(isset($_POST['move'])){
+      header( "Location: ./overjoy.php?id=".$_POST['id']);
+    }
+    ?>
+  <div class="accordion" id="accordion-4">
   <div class="card">
     <div class="card-header" id="header-4a">
       <button class="btn btn-link" type="button"
           data-toggle="collapse" data-target="#card-4a"
           aria-expanded="true" aria-controls="card-4a">
-        EASY CLEAR
+        FAILED
       </button>
     </div>
     <div id="card-4a" class="collapse"
         aria-labelledby="header-4a" data-parent="#accordion-4">
-      <div class="card-body">
+      <div class="card-body　easy-lamp">
         <?php
         $a = 0;
-        $result = $html->find('.easyclear');
+        $result = $html->find('.noclear');
         while($a < count($result)) {
+          echo $result[$a].' ';
+          $a++;
           echo $result[$a].'<br>';
           $a++;
         }
@@ -512,22 +522,106 @@ $a = 0;
       </div>
     </div>
   </div>
+
   <div class="card">
     <div class="card-header" id="header-4b">
       <button class="btn btn-link" type="button"
           data-toggle="collapse" data-target="#card-4b"
-          aria-expanded="false" aria-controls="card-4b">
-        Header B
+          aria-expanded="true" aria-controls="card-4b">
+        EASY CLEAR
       </button>
     </div>
     <div id="card-4b" class="collapse"
         aria-labelledby="header-4b" data-parent="#accordion-4">
-      <div class="card-body">
-        Card B
+      <div class="card-body　easy-lamp">
+        <?php
+        $a = 0;
+        $result = $html->find('.easyclear');
+        while($a < count($result)) {
+          echo $result[$a].' ';
+          $a++;
+          echo $result[$a].'<br>';
+          $a++;
+        }
+        ?>
       </div>
     </div>
   </div>
-</div>
+
+  <div class="card">
+    <div class="card-header" id="header-4c">
+      <button class="btn btn-link" type="button"
+          data-toggle="collapse" data-target="#card-4c"
+          aria-expanded="true" aria-controls="card-4c">
+        CLEAR
+      </button>
+    </div>
+    <div id="card-4c" class="collapse"
+        aria-labelledby="header-4c" data-parent="#accordion-4">
+      <div class="card-body　easy-lamp">
+        <?php
+        $a = 0;
+        $result = $html->find('.normalclear');
+        while($a < count($result)) {
+          echo $result[$a].' ';
+          $a++;
+          echo $result[$a].'<br>';
+          $a++;
+        }
+        ?>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="header-4d">
+      <button class="btn btn-link" type="button"
+          data-toggle="collapse" data-target="#card-4d"
+          aria-expanded="true" aria-controls="card-4d">
+        HARD CLEAR
+      </button>
+    </div>
+    <div id="card-4d" class="collapse"
+        aria-labelledby="header-4d" data-parent="#accordion-4">
+      <div class="card-body　easy-lamp">
+        <?php
+        $a = 0;
+        $result = $html->find('.hardclear');
+        while($a < count($result)) {
+          echo $result[$a].' ';
+          $a++;
+          echo $result[$a].'<br>';
+          $a++;
+        }
+        ?>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header" id="header-4e">
+      <button class="btn btn-link" type="button"
+          data-toggle="collapse" data-target="#card-4e"
+          aria-expanded="true" aria-controls="card-4e">
+        FULL COMBO
+      </button>
+    </div>
+    <div id="card-4e" class="collapse"
+        aria-labelledby="header-4e" data-parent="#accordion-4">
+      <div class="card-body　easy-lamp">
+        <?php
+        $a = 1;
+        $result = $html->find('.fc');
+        while($a < count($result)) {
+          echo $result[$a].' ';
+          $a++;
+          echo $result[$a].'<br>';
+          $a++;
+        }
+        ?>
+      </div>
+    </div>
+  </div>
 
       <a href="./index.php">戻る</a>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
