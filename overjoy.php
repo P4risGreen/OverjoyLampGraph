@@ -16,12 +16,16 @@ $getid = "88630";
 if(isset($_GET['id']) && is_numeric($_GET['id'])) {
   $getid = $_GET['id'];
 }
+$getid = ltrim($getid, '0');
 $url = "https://stairway.sakura.ne.jp/bms/lroverjoy/?contents=player&page=".$getid;
 // URLを指定してオブジェクト化します
 $html = file_get_html($url);
 
+if( $html->find('.playerlist') == NULL){
+  header('Location: ./index.php?playernotfound=1');
+}
 
-
+//指定した Player が存在しません．
 $result = $html->find('.noclear');
 //echo count($result).'<br>';
 while($a < count($result)) {

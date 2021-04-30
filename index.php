@@ -14,6 +14,7 @@ $page = 1;
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 </head>
 <body>
+  <?php echo '<div class="alert alert-danger" role="alert">指定したIDのプレイヤーが存在しません。</div>'?>
   <h1>Overjoy</h1>
   <form action="index.php" method="post">
   <input type="text" class="form-control" name="id" placeholder="LR2ID">
