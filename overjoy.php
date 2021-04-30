@@ -165,12 +165,12 @@ while($a < count($result)) {
   //echo $result[$a].'<br>';
   $a++;
 }
-$a = 0;
+$a = 1;
 
 $result = $html->find('.fc');
 //echo count($result).'<br>';
 while($a < count($result)) {
-  //echo $result[$a]->plaintext.' ';
+  //echo $result[$a]->plaintext.'<br>';
   switch ($result[$a]->plaintext){
     case '★0':
     $zero[4]++;
@@ -251,7 +251,7 @@ while($a < count($result)) {
   $a++;
 }
 $a = 0;
-//echo $one[5].'<br>';
+//echo $one[4].'<br>';
 //echo $two[5].'<br>';
 //echo $three[5].'<br>';
 //echo $four[5].'<br>';
@@ -466,23 +466,23 @@ $a = 0;
           <td class="level">★★7</td>
           <td class="progress" style="width: 100%" data-toggle="modal" data-target="#modal" level="5" type="6">
             <div class="progress-bar progress-bar-fc" style="width: <?php echo $seven[4]/$seven[5]*100 ?>%" data-toggle="modal" data-target="#modal" level="1" type="4">
-              <span class="val"><?php if ($seven[6] != 0) echo $seven[6]?></span>
+              <span class="val"><?php if ($seven[4] != 0) echo $seven[4]?></span>
               <span class="per">51%</span>
             </div>
             <div class="progress-bar progress-bar-danger" style="width: <?php echo $seven[3]/$seven[5]*100 ?>%" data-toggle="modal" data-target="#modal" level="5" type="4">
-              <span class="val"><?php if ($seven[6] != 0) echo $seven[6]?></span>
+              <span class="val"><?php if ($seven[3] != 0) echo $seven[3]?></span>
               <span class="per">10%</span>
             </div>
             <div class="progress-bar progress-bar-info" style="width: <?php echo $seven[2]/$seven[5]*100 ?>%" data-toggle="modal" data-target="#modal" level="5" type="3">
-              <span class="val"><?php if ($seven[6] != 0) echo $seven[6]?></span>
+              <span class="val"><?php if ($seven[2] != 0) echo $seven[2]?></span>
               <span class="per">90%</span>
             </div>
             <div class="progress-bar progress-bar-success" style="width: <?php echo $seven[1]/$seven[5]*100 ?>%" data-toggle="modal" data-target="#modal" level="5" type="4">
-              <span class="val"><?php if ($seven[6] != 0) echo $seven[6]?></span>
+              <span class="val"><?php if ($seven[1] != 0) echo $seven[1]?></span>
               <span class="per">10%</span>
             </div>
             <div class="progress-bar progress-bar-gray" style="width: <?php echo $seven[0]/$seven[5]*100 ?>%" data-toggle="modal" data-target="#modal" level="5" type="3">
-              <span class="val"><?php if ($seven[6] != 0) echo $seven[6]?></span>
+              <span class="val"><?php if ($seven[0] != 0) echo $seven[0]?></span>
               <span class="per">90%</span>
             </div>
           </td>
