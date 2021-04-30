@@ -488,7 +488,49 @@ $a = 0;
           </td>
         </tr>
       </tbody></table><br>
+
+      <div class="accordion" id="accordion-4">
+  <div class="card">
+    <div class="card-header" id="header-4a">
+      <button class="btn btn-link" type="button"
+          data-toggle="collapse" data-target="#card-4a"
+          aria-expanded="true" aria-controls="card-4a">
+        EASY CLEAR
+      </button>
+    </div>
+    <div id="card-4a" class="collapse"
+        aria-labelledby="header-4a" data-parent="#accordion-4">
+      <div class="card-body">
+        <?php
+        $a = 0;
+        $result = $html->find('.easyclear');
+        while($a < count($result)) {
+          echo $result[$a].'<br>';
+          $a++;
+        }
+        ?>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="header-4b">
+      <button class="btn btn-link" type="button"
+          data-toggle="collapse" data-target="#card-4b"
+          aria-expanded="false" aria-controls="card-4b">
+        Header B
+      </button>
+    </div>
+    <div id="card-4b" class="collapse"
+        aria-labelledby="header-4b" data-parent="#accordion-4">
+      <div class="card-body">
+        Card B
+      </div>
+    </div>
+  </div>
+</div>
+
       <a href="./index.php">戻る</a>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>
